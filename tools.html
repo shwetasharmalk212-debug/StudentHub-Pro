@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Tools - Calculator Hub</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Student Tools</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="tools.html">Tools</a>
+    <a href="notes.html">Notes</a>
+    <a href="blog.html">Blog</a>
+</nav>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Percentage Calculator</h2>
+        <input id="m" placeholder="Marks">
+        <input id="t" placeholder="Total">
+        <button onclick="calc()">Calculate</button>
+        <p id="res"></p>
+    </div>
+
+</div>
+
+<script>
+function calc() {
+    let m = document.getElementById("m").value;
+    let t = document.getElementById("t").value;
+    let r = (m / t) * 100;
+    document.getElementById("res").innerText = "Percentage: " + r.toFixed(2) + "%";
+}
+</script>
+
+</body>
+</html>
